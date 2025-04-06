@@ -1,6 +1,8 @@
 # Repositorio de ejercicios de BBDD
 
-<img src="https://github.com/martinamster/Bbdd-Matrix/blob/main/images/logo-fcenuba.png">
+<p align="center">
+  <img src="https://github.com/JuaniAlvarezC/Bbdd-Matrix/blob/main/images/logo-fcenuba.png" width="350" height="350">
+</p>
 
 ## Contribución
 
