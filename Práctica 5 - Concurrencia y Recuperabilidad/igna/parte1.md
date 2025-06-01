@@ -5,9 +5,9 @@ En este caso es igual al grafo ya que tiene una arista.
 
 H1 = r1(A); w1(A); r2(A); w2(A); r1(B); w1(B); r2(B); w2(B);
 
-Para serialziarla y que no haya conflictos `supongo` hay que intercambair w1(A) con r2(A) y w1(B) con r2(B) que son adyacentes
+Para serialziarla y que no haya conflictos `supongo` hay que intercambair r1(B); w1(B); con r2(A); w2(A); que son adyacentes
 
-H1' = r1(A);  r2(A); w1(A); w2(A); r1(B); r2(B);  w1(B); w2(B);
+H1' = r1(A); w1(A); r1(B); w1(B); r2(A); w2(A); r2(B); w2(B);
 
 ---
 1.2)a)
