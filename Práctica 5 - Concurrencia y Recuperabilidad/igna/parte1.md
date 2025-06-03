@@ -17,7 +17,7 @@ H1' = r1(A); w1(A); r1(B); w1(B); r2(A); w2(A); r2(B); w2(B);
 - $H_4$ es **RC** (mismo motivo que $H_1$)
 - $H_5$ es **ACA** (mismo motivo que $H_2$)
 
-b) `CONSULTAR`
+b)
 - $H_1$ *lost update* por la primer escritura sobre X en T1 y T4 y sobre Y entre T3 y T4
 - $H_2$ *lost update* por la primer escritura sobre X en T1 y T2
 - $H_3$ *lost update* por la primer escritura sobre X en T1 y T2
@@ -35,6 +35,6 @@ b) `CONSULTAR`
 
 1.4
 
-- $H_1 = r_1(C);r_2(D);w_1(B);r_2(B);w_2(C);c_2;w_1(C);c_1$ : T2 hace commit antes que T1 habiendo leído B luego de que T1 la haya escrito **NoRC**
-- $H_2 = r_2(D);r_1(C);w_1(C);w_2(C);w_1(B);c_1;r_2(B);c_2$ : Todas leen de transacciones que hicieron commit pero T2 escribe C luego de que T1 escribe C **ACA**
-- $H_3 = r_2(D);r_1(C);w_1(C);w_1(B);c_1;w_2(C);r_2(B);c_2$ : Todas lee y escriben de transacciones que hicieron commit, **ST**
+- $H_1 = r_2(D);w_1(B);r_1(C);r_2(B);w_2(C);c_2;w_1(C);c_1$ : T2 hace commit antes que T1 habiendo leído B luego de que T1 la haya escrito **NoRC**
+- $H_2 = r_2(D);w_1(B);r_1(C);w_1(C)w_2(C);c_1;r_2(B);c_2$ : Todas leen de transacciones que hicieron commit pero T2 escribe C luego de que T1 escribe C **ACA**
+- $H_3 = r_2(D);w_1(B);r_1(C);w_1(C);c_1;w_2(C);r_2(B);c_2$ : Todas lee y escriben de transacciones que hicieron commit, **ST**
