@@ -18,7 +18,7 @@ H1' = r1(A); w1(A); r1(B); w1(B); r2(A); w2(A); r2(B); w2(B);
 - $H_5$ es **ACA** (mismo motivo que $H_2$)
 
 b)
-- $H_1$ *lost update* por la primer escritura sobre X en T1 y T4 y sobre Y entre T3 y T4
+- $H_1$ *lost update* por la primer escritura sobre X en T1 y T4 y sobre Y entre T3 y T4. Ademas, *dirty read* de T3 sobre X escrito por T1
 - $H_2$ *lost update* por la primer escritura sobre X en T1 y T2
 - $H_3$ *lost update* por la primer escritura sobre X en T1 y T2
 - $H_4$ *dirty read* por la primer escritura y primer lectura sobre X, además un *lost update* en Y
