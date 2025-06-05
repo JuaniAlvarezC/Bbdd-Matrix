@@ -33,7 +33,7 @@ Orden topológico: T2 -> T3 -> T1 -> T4
 |u(A)|||||
 |||||rl(B)|
 |||||u(B)|
-|wl(C)|||||
+|wl(B)|||||
 ||wl(C)||||
 |u(B)|||||
 |||rl(B)|||
@@ -51,10 +51,7 @@ Orden topológico: T2 -> T3 -> T1 -> T4
 |||u(B)|||
 
 b)
-Es serializable ya que el grafo es aciclico con sumidero en T5. Historias seriales equivalentes:
-- T1 -> T2 -> T3 -> T4 -> T5
-- T1 -> T3 -> T2 -> T4 -> T5
-- T3 -> T1 -> T2 -> T4 -> T5
+No es serializable ya que el grafo tiene un ciclo T1 -> T2 -> T4 -> T5 -> T1
 
 c) Cumple con 2PL?
 - T1: No cumple
