@@ -11,3 +11,84 @@ ORDER BY e.BusinessEntityID,jc.JobCandidateID;
 /*
 Puesto que se tiene en jc un IX ordenado por BusinessEntityID y que en e la PK es BusinessentityID, decide simplemente hacer un Nested Loop siendo el Inner e. Es entonces que el JOIN lo resuelve buscando los valores del IX de jc en la PK de e y luego procede a devolver el valor requerido que se almacena en IX puesto que es la PK de jc
 */
+--1--
+SELECT * FROM Sales.SalesOrderDetail
+WHERE ProductID = 870 OR ProductID = 897;
+
+SELECT * FROM Sales.SalesOrderDetail 
+WHERE ProductID = 870
+UNION ALL
+SELECT * FROM Sales.SalesOrderDetail 
+WHERE ProductID = 897;
+
+DECLARE @productId INT = 897;
+
+--SELECT * FROM Sales.SalesOrderDetail WHERE ProductID = @productId
+--OPTION( OPTIMIZE FOR (@productId = 897) );
+
+SELECT * FROM Sales.SalesOrderDetail WHERE ProductID = @productId
+OPTION( OPTIMIZE FOR (@productId = 870) );
+
+
+-- Consulta A
+
+SELECT * FROM Sales.SalesOrderDetail 
+
+WHERE ProductID = 897;
+
+
+-- Consulta B
+
+DECLARE @prodId INT = 897;
+
+SELECT * FROM Sales.SalesOrderDetail 
+
+WHERE ProductID = @prodId;
+
+
+--4--
+SELECT * FROM Sales.SalesOrderDetail d
+JOIN Production.Product p ON d.ProductID = p.ProductID;
+
+-- Consulta B
+SELECT * FROM Sales.SalesOrderDetail d
+JOIN Production.Product p ON d.ProductID = p.ProductID
+WHERE p.Name LIKE 'A%';
+
+--5--
+-- Consulta A
+
+SELECT * 
+FROM Sales.SalesOrderDetail d
+JOIN Production.Product p 
+  ON d.ProductID = p.ProductID
+WHERE p.ProductID = 870;
+
+
+-- Consulta B
+
+SELECT * 
+FROM Sales.SalesOrderDetail d
+JOIN Production.Product p 
+  ON d.ProductID = p.ProductID
+WHERE p.Color = 'Black'
+
+SELECT * 
+FROM Production.Product p 
+WHERE p.Color = 'aaaaaaa'
+
+--1--
+SELECT * FROM Sales.SalesOrderDetail 
+
+WHERE ProductID = 870
+
+UNION ALL
+
+SELECT * FROM Sales.SalesOrderDetail 
+
+WHERE ProductID = 897;
+
+SELECT * FROM Sales.SalesOrderDetail 
+
+WHERE ProductID = 897 OR ProductID = 898;
+
