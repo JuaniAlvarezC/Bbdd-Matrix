@@ -51,7 +51,7 @@ Orden topológico: T2 -> T3 -> T1 -> T4
 |||u(B)|||
 
 b)
-No es serializable ya que el grafo tiene un ciclo T1 -> T2 -> T4 -> T5 -> T1
+No es serializable ya que el grafo tiene un ciclo T1 -> T3 -> T5 -> T1
 
 c) Cumple con 2PL?
 - T1: No cumple
