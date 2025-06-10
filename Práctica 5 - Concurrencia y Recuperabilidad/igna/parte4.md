@@ -104,7 +104,7 @@ X|2|200|200
 Y|1|100|100
 Z|4|400|400
 
-b) *MVTO* `CONSULTAR los aborts`
+b) *MVTO* 
 
 Supongo que los commits se hacen inmediatamente después de la última operación
 
@@ -120,14 +120,13 @@ r1(Y0)
 ||w2(X2)!
 ||a2
 w1(Y1)
-|||r3(Z4)!
-|||a3
+|||r3(Z0)
+|||c3
 c1
 
 - T2 es abortada en w2(X)
-- T3 es abortada por leer una versión más joven
 
-X = 0, Y = 1, Z = 4
+X = 3, Y = 1 , Z = 4
 
 c)
 
