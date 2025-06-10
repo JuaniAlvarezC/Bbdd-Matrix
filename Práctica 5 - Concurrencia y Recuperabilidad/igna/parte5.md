@@ -133,4 +133,27 @@ CKPT de T2 y T4\
 5a) Luego del < COMMIT T4 >\
 5b) Desde el END CKPT hacia atrás (hasta START T2)
 
-5.6)
+5.6) 
+
+Para los a): Siempre después de el start en cualquier lugar, mientras sea después.
+
+Para los b): Si el END se escribe entonces se rehace todo lo que fue commiteado después del END CKPT. Si no se escribe se rehace todo lo commiteado.
+
+5.7)
+
+a) T3, T4 y T5 incompletas, se desahcen los cambios. Las demás se asignan.\
+b) Identico al a.\
+c) Idem al a pero T5 no es incompleta.\
+d) Idem al b pero T4 no es incompleta.
+
+
+|Item|a|b|c|d|
+|-|-|-|-|-|
+A|20|20|20|20|
+B|24|24|24|24|
+C|10|10|10|10|
+D|4|4|4|4|
+E|21|21|21|21|
+F|19|19|19|41|
+G|27|27|28|28|
+H|26|26|26|23|
