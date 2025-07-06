@@ -6,4 +6,4 @@
 
 ## Contribución
 
-Para cada guía de ejercicios habrá una carpeta dónde cada uno puede subir un PDF o una carpeta con todos los ejercicios que haya resuelto hasta el momento. Cada PDF o carpeta tiene que tener el nombre de la persona que lo hizo.
+Para cada guía de ejercicios habrá una carpeta dónde cada uno puede subir una carpeta con todos los ejercicios que haya resuelto hasta el momento. Cada carpeta tiene que tener el nombre de la persona que lo hizo.
